@@ -1,0 +1,84 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Mapa de economia popular",
+    "description": "Documentacion de endpoints, API para consumo de geonode."
+  },
+  "host": "localhost:5000",
+  "basePath": "/",
+  "tags": [],
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/api/v2/health": {
+      "get": {
+        "tags": [],
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "User": {
+      "type": "object",
+      "properties": {
+        "user": {
+          "type": "string",
+          "example": "string"
+        },
+        "pass": {
+          "type": "string",
+          "example": "string"
+        }
+      }
+    },
+    "UserSignUp": {
+      "type": "object",
+      "properties": {
+        "user": {
+          "type": "string",
+          "example": "string"
+        },
+        "pass": {
+          "type": "string",
+          "example": "string"
+        },
+        "admin": {
+          "type": "boolean",
+          "example": false
+        }
+      }
+    },
+    "Entities": {
+      "type": "object",
+      "properties": {
+        "user": {
+          "type": "string",
+          "example": "string"
+        },
+        "pass": {
+          "type": "string",
+          "example": "string"
+        },
+        "email": {
+          "type": "string",
+          "example": "string"
+        }
+      }
+    }
+  }
+}

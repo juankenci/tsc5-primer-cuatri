@@ -1,0 +1,32 @@
+
+.Carrousel{
+  width: 100%;
+  height: 300px;
+  position: relative;
+  top: 0px;
+  margin: 0px;
+  padding: 0px;
+  display:contents;
+}
+
+.carrouselTitle{
+  font-size:50px;
+  color:#5e1113;
+  padding-top: 20px;
+  
+
+}
+
+.carrouselDesc {
+  font-size:20px;
+  font-style: italic;
+  color:#202325;
+  padding-bottom: 20px;
+  
+}
+.carrouselText {
+  background-color:rgba(245, 245, 245, 0.5) ;
+  border-radius:15px;
+  background-size: cover;  
+  
+}

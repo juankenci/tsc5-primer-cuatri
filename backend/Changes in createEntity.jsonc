@@ -1,0 +1,68 @@
+{
+  "productiveUnit": "dasdasd", //name
+  "branch": 7, //branchId
+//   "rubrosSeleccionados": 65, Creo que no va mas
+"tipoUnidadProductiva": 6,//categoryId
+"subUnit": 1,//subcategoryId
+//   "subrubros": [4],//Creo que no va mas
+
+"rubrosSubrubrosSeleccionados": {
+    "60": [ 
+      { "text": "Radio", "value": 1 }, 
+      { "text": "Audiovisual", "value": 3 }
+    ],
+    "65": [{ "text": "Cuidado de ancianxs y niñxs", "value": 4 }]
+},
+// Reemplazar por 
+"linesSublinesOfBusiness": [
+  {"linesOfBusinessId": 60, "sublinesOfBusinessId": 1},  
+  {"linesOfBusinessId": 60, "sublinesOfBusinessId": 3},   
+  {"linesOfBusinessId": 65, "sublinesOfBusinessId": 4}, 
+  {"linesOfBusinessId": 68}
+],
+"services": "dsa", //goodsAndServices
+"legalForm": 2, // legalFormId
+"dateActivities": "2022-11-14T03:00:00.000Z", //startDate 
+
+
+"country": 54, //countryId
+"province": 5406,//provinceId
+
+"locality": 5406007, //localityId
+"municipality": 16178, //districtId 
+// localidad y districto entan invertidos en web
+"neighborhood": "sadasd",
+"street": "das",
+"streetNumber": 123,
+"betweenStreets": "dasdasd", //tenemos que cambiar
+"lat": -34.667324636823764, //latitude
+"lon": -58.36584955850552, //longitude
+"foundLocationWithStreet": false, //no va
+
+
+"referente": "dsadas", //referer
+"celular": 321321, //cellphone STRING
+"telefono": 3123, //phone STRING
+"email": "mail@mail.com", //email
+
+  "cant_trabajadores": 2, //workersNumber
+  "cant_mujeres": 1, //womenNumber
+  "cant_hombres": 21, //menNumber
+  "cant_otros": 12, //otherWorkersNumber
+  "remunerados": 2, // paidWorkersNumber
+  "voluntarios": 2, //volunteerWorkersNumber
+  "personas_asistidas": 2,//assistsNumber
+  "situacion_espacio_fisico": "dsa", //physicalSpaceSituation
+  "situacion_inmueble": "Alquilado", // propertySituation
+  "integra_organizacion_base": "dasda", //baseOrganization
+  "tiene_subsidio": "dsadsa", //subsidy
+  "sitio_web": "dsad", //website
+  "links": "asda", //relatedLinks
+  "informacion_adicional": "", //additionalInformation
+  "articulaciones": "" //joints
+
+
+//   AGREGAR IMAGENES Y AUDIOS
+// audioFiles:[{name: , file: base64}]
+// imageFiles:[{name: , file: base64}]
+}

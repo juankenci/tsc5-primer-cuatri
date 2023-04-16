@@ -1,0 +1,46 @@
+
+
+
+.sessionBar-container {
+    width: 100%;
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    justify-content: flex-end;
+  }
+  
+  .header-container {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    width: 100%;
+  }
+  
+  .header-logo {
+    height: 50px;
+    width: 70px;
+
+  }
+  
+  i{
+    margin-right: 5px !important;
+  }
+  
+  .header-navigation-items {
+    display: flex;
+    column-gap: 50px;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    font-weight: bold;
+    margin: 15px 30px 0 0;
+  
+  }
+  
+  .header-divider{
+    border-top: 1.5px solid gray;
+    height: 10px;
+    width: 94%;
+    margin: 5px 55px;
+  }

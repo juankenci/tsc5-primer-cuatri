@@ -1,0 +1,7 @@
+export const TOKEN = "token"
+export const LOCATION_INFO = "location-info"
+export const PERSONAL_INFO = "personal-info"
+export const CONTACT_INFO = "contact-info"
+export const OTHER_INFO = "other-info"
+export const LATITUD_LONGITUD = "latitud-longitud"
+export const BASE_PATH = "http://localhost:5000/api/v2"

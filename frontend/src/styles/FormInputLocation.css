@@ -1,0 +1,47 @@
+.button-form{
+    width: 174px;
+}
+
+.p-relative{
+    position: relative;
+}
+
+.loader {
+    position: absolute;
+    top: 7px;
+    left: 74px;
+    border: 6px solid rgb(255 255 255 / 100%);
+    border-radius: 50%;
+    border-left-color: transparent;
+    width: 25px;
+    height: 25px;
+    animation: giro 1s linear infinite;
+}
+
+.select{
+    width: 100%;
+    padding: 0 !important;
+}
+
+.select div.text{
+    margin: 10px;
+}
+
+.select div.item{
+    padding: 8px 8px !important;
+}
+
+.select div.item span{
+    margin: 0;
+}
+  
+@keyframes giro {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+  

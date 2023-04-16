@@ -1,0 +1,15 @@
+.ol-map-point {  
+
+    margin: 2%; 
+    height: 500px;  
+    width: 95%;
+}
+
+
+.buttonMap {
+    margin-top: 20px;
+    margin-left: 30%;
+    margin-right: 30%;
+    width: 40%;
+    min-width: 50px;
+}

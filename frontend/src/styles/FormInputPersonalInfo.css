@@ -1,0 +1,41 @@
+.next-button{
+    margin: 10px !important;
+    color: white !important ;
+    background-color: #1890ff !important;
+}
+
+.boxRubrosSubrubros{
+    width: 100%;
+    min-height: 80px;
+    border: 1px solid rgba(34,36,38,.15);
+    border-radius: 5px;
+    background: white;
+}
+
+.coma span::after {
+    content: ", ";
+}
+
+.coma span:last-child::after {
+    content: "";
+}
+
+.field{
+    width: 100%;
+    margin: 0 !important;
+}
+
+.information-text{
+    font-size: 1.1rem;
+}
+
+.boxRubrosSubrubros-title{
+    font-size: 12px;
+}
+
+/* bootstrap size medium */
+@media (min-width: 768px){
+    .boxRubrosSubrubros-title{
+        font-size: 1rem;
+    }
+}

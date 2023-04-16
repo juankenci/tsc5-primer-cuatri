@@ -1,0 +1,209 @@
+/****************************************************************************************************************************/
+1 Cuatrimestre 2022: Ajustes en los Test realizados en el cuatrimestre anterior
+
+-Se modifican los test debido a la modificacion de la base de datos (nombre de tablas,definiciones nuevas de servicios, etc)
+-Se agregan nuevos test, ya que no existian:
+	
+	continentsService.spec.js 
+	districtsService.spec.js
+	localitiesService.spec.js
+	provinciesService.spec.js
+	countriesService.spec.js
+	branchesService.spec.js
+	errorHandlerService.spec.js
+	legalFormsService.spec.js
+	linesOfBusinessService.spec.js
+	rolesService.spec.js
+	sublinesOfBusinessService.spec.js
+
+-Se modifica el nombre de entities.spec.js a entitiesService.spec.js
+-Se modifica el nombre de categoriescategoriesService.spec.js a categoriesService.spec.js
+
+-Se modifican los test:
+"Los cambios son referidos a los nombres de tablas, nuevas relaciones en db y funcionalidades de los servicios"
+
+	entitiesService.js
+		-No existe mas la funcion findAll(), se utiliza getAll()
+    	-Si no existe devuelve Null, no Undefined. Se modifica expect(entity).toBeUndefined() por expect(entity).toBeNull()
+    	-Se modifica Json de carga, ya que se modificaron en db los nombres de tablas y relaciones. Se utiliza:
+
+	    	const entityJson = {
+		        name: "newEntity",
+		        oldName: "oldEntity",
+		        recoveryDate: "10/5/2020",
+		        goodsAndServices: "bienes servicios",
+		        startDate: "1/1/1994",
+		        street: "falsa",
+		        streetNumber: "123",
+		        betweenStreet1: "una calle",
+		        betweenStreet2: "otra calle",
+		        neighborhood: "pinieiro",
+		        latitude: -34.660287, 
+		        longitude: -58.355906,
+		        continentId:2,
+		        countryId:54,
+		        provinceId:5482,
+		        districtId:5482133,
+		        localityId:5590,
+		        branchId:1,
+		        categoryId: 1,
+		        subcategoryId: 2,
+		        legalFormId:1
+	    	}
+
+	    	Donde los siguientes registros poseen una relacion real, sino no se pueden cargar:
+	    		continentId:2,
+		        countryId:54,
+		        provinceId:5482,
+		        districtId:5482133,
+		        localityId:5590,
+
+		-El id es autoincremental, con lo cual no se que id (hardcodeado) es el elemento a cargar. Se deja de utilizar esa logica.
+
+	subcategoriesService.spec.js
+		-Se modifica tamaño total de sub categorias. Pasa a 14.
+		-Se cambia el idioma de la tabla con lo cual cambia el json de prueba.
+
+	categoriesService.spec.js
+		-Se modifica tamaño total de categorias. Pasa a 9.
+		-Se cambia el idioma de la tabla con lo cual cambia el json de prueba.
+	
+-Se eliminan los test:
+
+	businesAreasService.spec.js 
+	subunitiesService.spec.js
+	unitiesService.spec.js
+
+
+/****************************************************************************************************************************/
+
+BACKEND - SERVICIOS AL DIA 24-Junio-2022
+
+services/
+
+(16)
+branchesService.js 
+categoriesService.js 
+continentsService.js 
+countriesService.js 
+districtsService.js 
+entitiesService.js 
+errorHandler.js 
+legalFormsService.js 
+linesOfBusinessService.js 
+localitiesService.js 
+provincesService.js 
+rolesService.js 
+subcategoriesService.js 
+sublinesOfBusinessService.js 
+userService.js
+vaultService.js
+
+test/services
+
+(15)
+branchesService.spec.js -> OK 
+categoriesService.spec.js  -> OK
+continentsService.spec.js  -> OK 
+countriesService.spec.js -> OK  
+districtsService.spec.js -> OK  
+entitiesService.spec.js  -> OK
+legalFormsService.spec.js -> OK 
+linesOfBusinessService.spec.js -> OK  
+localitiesService.spec.js -> OK 
+provincesService.spec.js -> OK 
+rolesService.spec.js  -> OK (FALTARIA CREATE ROLE)
+subcategoriesService.spec.js -> OK 
+sublinesOfBusinessService.spec.js  -> OK
+userService.spec.js -> OK (no se tocan)
+vaultService.spec.js  -> OK (no se tocan)
+
+
+/********************************************************************************************************************/
+Se corren los test localmente y el resultado es el siguiente.
+24-Junio-2022
+
+debian@debian10:~/tsc5/tsc-2022c1/backend$ jest
+ PASS  test/services/entitiesService.spec.js
+  ✓ get entitiesService equal 0 (102 ms)
+  ✓ create and delete (73 ms)
+  ✓ update (173 ms)
+
+ PASS  test/services/subcategoriesService.spec.js
+  ✓ get subcategoriesService equal 14 (60 ms)
+  ✓ get by id 1 - Centro comunitario  (15 ms)
+  ✓ create and delete (62 ms)
+  ✓ update (55 ms)
+
+ PASS  test/services/legalFormsService.spec.js
+  ✓ get 8 legalForms (41 ms)
+  ✓ get by id 8 -> Sin regularizar (5 ms)
+
+ PASS  test/services/categoriesService.spec.js
+  ✓ get 9 categories (86 ms)
+  ✓ get by id 1 - Agricultura Familiar rural o periurbana (10 ms)
+  ✓ create and delete (45 ms)
+  ✓ update (88 ms)
+
+ PASS  test/services/provincesService.spec.js
+  ✓ get 25 provinces for Argentina (48 ms)
+  ✓ get Santa Fe provinces for id (4 ms)
+
+ PASS  test/services/districtsService.spec.js
+  ✓ get Vera districts for Santa Fe (84 ms)
+  ✓ get 21 districts for Santa Fe (9 ms)
+
+ PASS  test/services/countriesService.spec.js
+  ✓ get 204 countries in the World (51 ms)
+  ✓ getById 54 is Argentina  (7 ms)
+  ✓ get 40 countries in America (7 ms)
+
+ PASS  test/services/localitiesService.spec.js
+  ✓ get districtID for VERA (43 ms)
+
+ PASS  test/services/linesOfBusinessService.spec.js
+  ✓ get 68 linesOfBusiness (29 ms)
+  ✓ get by id 68 -> Logística y servicios de delivery (2 ms)
+  ✓ get by id branch (7 ms)
+
+ PASS  test/services/continentsService.spec.js
+  ✓ get 5 continents (180 ms)
+  ✓ get América id = 2 (214 ms)
+
+ PASS  test/services/sublinesOfBusinessService.spec.js
+  ✓ get 5 sublinesOfBusinessService (140 ms)
+  ✓ get by id 5 -> Ollas y comedores (15 ms)
+  ✓ get by id lineOfBusinessId (8 ms)
+
+ PASS  test/services/rolesService.spec.js
+  ✓ get rolesService admin (56 ms)
+
+ PASS  test/services/branchesService.spec.js
+  ✓ get 8 branches (73 ms)
+  ✓ get by id 8 -> Transporte, almacenamiento y logística (15 ms)
+
+ PASS  test/services/usersService.spec.js
+  ✓ login fallido (9 ms)
+  ✓ login exitoso (9 ms)
+
+ PASS  test/services/vaultService.spec.js
+  ✓ Usuario valido (5 ms)
+  ✓ Usuario invalido (3 ms)
+
+ FAIL  config/test.js
+  ● Test suite failed to run
+
+    Your test suite must contain at least one test.
+
+      at onResult (../../../../../usr/local/lib/node_modules/jest/node_modules/@jest/core/build/TestScheduler.js:172:18)
+          at Array.map (<anonymous>)
+
+Test Suites: 1 failed, 15 passed, 16 total
+Tests:       36 passed, 36 total
+Snapshots:   0 total
+Time:        10.908 s
+Ran all test suites.
+Jest did not exit one second after the test run has completed.
+
+This usually means that there are asynchronous operations that weren't stopped in your tests. Consider running Jest with `--detectOpenHandles` to troubleshoot this issue.
+debian@debian10:~/tsc5/tsc-2022c1/backend$ 

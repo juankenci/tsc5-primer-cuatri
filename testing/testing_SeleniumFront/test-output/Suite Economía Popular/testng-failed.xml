@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite Economía Popular.]">
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="test.ExplorarMapeo">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- test.ExplorarMapeo -->
+      <class name="test.Formularios">
+        <methods>
+          <include name="afterTest"/>
+          <include name="rellenarFormularioConDatosIncompletos"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- test.Formularios -->
+      <class name="test.Login">
+        <methods>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- test.Login -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Suite Economía Popular.] -->

@@ -1,0 +1,21 @@
+.contact-form{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.before-button{
+    margin: 10px !important;
+}
+
+.submit-button{
+    margin: 10px !important;
+    color: white !important ;
+    background-color: #37a90e !important;
+}
+
+.columns{
+    column-count:2;
+    column-gap: 5em;
+    column-width: 200px;
+}

@@ -1,0 +1,46 @@
+
+
+@media only screen and (max-width: 650px) {
+    .hideMobile {
+      display:none; }
+     }
+  
+
+
+html {
+    font-family: 'Lato';
+    background-color: #dfe4eb;
+    color: #202325; 
+}
+
+
+.app{
+    width: 100%;
+    height: 100%;
+    font-family: 'Lato';
+    background-color: #dfe4eb;
+    color: #202325; 
+  
+}
+
+#hide{
+    display:none !important;
+
+}
+
+#no-hide{
+    display:block !important;
+
+}
+
+#account-button{
+    margin-right: 10px;
+}
+
+#close-session{
+    margin: 10px
+}
+
+.btn-info{
+    margin: 10px;
+}

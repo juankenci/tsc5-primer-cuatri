@@ -1,0 +1,23 @@
+image: node:lts
+
+cache:
+  paths:
+    - node_modules/
+
+build:
+  stage: build
+  script:
+    - echo "Start building App"
+    - npm install
+    - npm run build
+    - echo "Build successfully!"
+
+
+
+test:
+  stage: test
+  script:
+    - echo "Start test App"
+    - npm install
+    - npm run test
+    - echo "Test successfully!"

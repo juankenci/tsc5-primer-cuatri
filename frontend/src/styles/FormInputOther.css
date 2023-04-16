@@ -1,0 +1,10 @@
+.middle{
+    font-weight: bold; 
+    justify-content: center;
+    align-items: center;
+}
+
+.ui.labeled.button:not([class*="left labeled"])>.label{
+    color: white !important ;
+    background-color: #1890ff !important;
+}

@@ -1,0 +1,42 @@
+.account {
+    margin-top: 50px;
+  }
+.account__configuration {
+    position: relative;
+    padding: 10px;
+}
+
+.account__configuration .title {
+    width: max-content;
+    background-color: #000;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px 5px 0 0;
+}
+
+.account__configuration .data{
+    background-color: white;
+    box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.change-form{
+    padding: 20px 15px;   
+}
+
+h4 {
+    font-size: 22px;
+}
+
+form{
+    text-align: center;    
+}
+
+.button{
+    padding: 12px 60px !important;
+
+}
+
+.actions{
+    text-align: center;
+    margin-top: 50px;
+}

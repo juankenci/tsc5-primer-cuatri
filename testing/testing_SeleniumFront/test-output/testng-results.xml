@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[Inicio de sesión exitoso - Test OK]]>
+    </line>
+    <line>
+      <![CDATA[Formulario ubicación completado correctamente - Test OK]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2022-11-19T16:35:29Z" name="Suite Economía Popular." finished-at="2022-11-19T16:36:27Z" duration-ms="58351">
+    <groups>
+    </groups>
+    <test started-at="2022-11-19T16:35:29Z" name="Command line test" finished-at="2022-11-19T16:36:27Z" duration-ms="58351">
+      <class name="test.Formularios">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:test.Formularios@314c508a]" started-at="2022-11-19T13:35:29Z" name="beforeTest" finished-at="2022-11-19T13:35:43Z" duration-ms="13966" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="rellenarFormularioCompleto()[pri:0, instance:test.Formularios@314c508a]" started-at="2022-11-19T13:35:43Z" name="rellenarFormularioCompleto" finished-at="2022-11-19T13:36:26Z" duration-ms="43287" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Inicio de sesión exitoso - Test OK]]>
+            </line>
+            <line>
+              <![CDATA[Formulario ubicación completado correctamente - Test OK]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- rellenarFormularioCompleto -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:test.Formularios@314c508a]" started-at="2022-11-19T13:36:26Z" name="afterTest" finished-at="2022-11-19T13:36:27Z" duration-ms="1064" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- test.Formularios -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Suite Economía Popular. -->
+</testng-results>
